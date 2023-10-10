@@ -1,0 +1,10 @@
+.HeaderContainer {
+    width: 85vw;
+    height: 10vh;
+    border: 2px solid red;
+}
+
+.HeaderHeading {
+    font-size: 2rem;
+    font-weight: 900;
+}

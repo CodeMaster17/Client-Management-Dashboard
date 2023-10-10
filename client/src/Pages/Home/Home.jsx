@@ -108,7 +108,7 @@ const Home = () => {
 
             <div className='homeHeader'>
 
-                <div className='cards d-flex'>
+                <div className='dataDisplay'>
 
                     <Cards />
                 </div>
