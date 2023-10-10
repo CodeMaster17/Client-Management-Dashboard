@@ -29,3 +29,9 @@
     border: 2px solid red;
     margin: auto;
 }
+
+.dataDisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
