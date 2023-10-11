@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Card from "react-bootstrap/Card"
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+// import Row from 'react-bootstrap/Row';
 import Select from 'react-select';
 import { registerfunc } from "../../services/Apis"
 import { ToastContainer, toast } from "react-toastify"
@@ -141,59 +141,68 @@ const Register = () => {
                             <img src={preview ? preview : "/man.png"} alt="img" />
                         </div>
 
-                        <Form>
-                            <Row>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>First name</Form.Label>
-                                    <Form.Control type="text" name='fname' value={inputdata.fname} onChange={setInputValue} placeholder='Enter FirstName' />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Last Name</Form.Label>
-                                    <Form.Control type="text" name='lname' value={inputdata.lname} onChange={setInputValue} placeholder='Enter LastName' />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" name='email' value={inputdata.email} onChange={setInputValue} placeholder='Enter Email' />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Mobile</Form.Label>
-                                    <Form.Control type="text" name='mobile' value={inputdata.mobile} onChange={setInputValue} placeholder='Enter Mobile' />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Select Your Gender</Form.Label>
-                                    <Form.Check
-                                        type={"radio"}
-                                        label={`Male`}
-                                        name="gender"
-                                        value={"Male"}
-                                        onChange={setInputValue}
-                                    />
-                                    <Form.Check
-                                        type={"radio"}
-                                        label={`Female`}
-                                        name="gender"
-                                        value={"Female"}
-                                        onChange={setInputValue}
-                                    />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Select Your Status</Form.Label>
+                        <form>
+                            <div className='border'>
+                                <div className="">
+                                    <label>First name</label>
+                                    <input type="text" name='fname' value={inputdata.fname} onChange={setInputValue} placeholder='Enter FirstName' />
+                                </div>
+                                <div className="">
+                                    <label>Last Name</label>
+                                    <input type="text" name='lname' value={inputdata.lname} onChange={setInputValue} placeholder='Enter LastName' />
+                                </div>
+                                <div className="">
+                                    <label>Email address</label>
+                                    <input type="email" name='email' value={inputdata.email} onChange={setInputValue} placeholder='Enter Email' />
+                                </div>
+                                <div className="">
+                                    <label>Mobile</label>
+                                    <input type="text" name='mobile' value={inputdata.mobile} onChange={setInputValue} placeholder='Enter Mobile' />
+                                </div>
+                                <div className="">
+                                    <label>Select Your Gender</label>
+                                    <div>
+                                        <label>
+                                            <input
+                                                type={"radio"}
+                                                label={`Male`}
+                                                name="gender"
+                                                value={"Male"}
+                                                onChange={setInputValue}
+                                            />
+                                            <span>Male</span>
+                                        </label>
+                                        <label>
+                                            <input
+                                                type={"radio"}
+                                                label={`Female`}
+                                                name="gender"
+                                                value={"Female"}
+                                                onChange={setInputValue}
+                                            />
+                                            <span>Female</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="">
+                                    <label>Select Your Status</label>
                                     <Select options={options} onChange={setStatusValue} />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Select Your Profile</Form.Label>
-                                    <Form.Control type="file" name='user_profile' onChange={setProfile} placeholder='Select Your Profile' />
-                                </Form.Group>
-                                <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                                    <Form.Label>Enter Your Location</Form.Label>
-                                    <Form.Control type="text" name='location' value={inputdata.location} onChange={setInputValue} placeholder='Enter Your Location' />
-                                </Form.Group>
-                                <Button variant="primary" type="submit" onClick={submitUserData}>
-                                    Submit
-                                </Button>
-                            </Row>
+                                </div>
+                                <div className="">
+                                    <label>Select Your Profile</label>
+                                    <input type="file" name='user_profile' onChange={setProfile} placeholder='Select Your Profile' />
+                                </div>
+                                <div className="">
+                                    <label>Enter Your Location</label>
+                                    <input type="text" name='location' value={inputdata.location} onChange={setInputValue} placeholder='Enter Your Location' />
+                                </div>
+                            </div>
+                            <button type="submit" onClick={submitUserData}>
+                                Submit
+                            </button>
 
-                        </Form>
+
+                        </form>
                     </Card>
                     <ToastContainer position="top-center" />
                 </div>
