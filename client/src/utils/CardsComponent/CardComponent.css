@@ -1,0 +1,27 @@
+.cardComponentContainer {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    height: 15vh;
+    border-radius: 10px;
+}
+
+.cardImage {
+    width: 20%;
+}
+
+.cardTitle {
+    font-size: 1.8rem;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardText {
+    font-size: 2rem;
+}
