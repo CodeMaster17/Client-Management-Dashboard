@@ -135,72 +135,76 @@ const Register = () => {
         <>
             {
                 showspin ? <Spinner /> : <div className="container">
-                    <h2 className='text-center mt-1'>Register Your Details</h2>
-                    <Card className='shadow mt-3 p-3'>
+                    <h2 className='text-center mt-4'>Register Your Details</h2>
+                    <Card className='shadow mt-2 p-5 m-5'>
                         <div className="profile_div text-center">
                             <img src={preview ? preview : "/man.png"} alt="img" />
                         </div>
 
                         <form>
-                            <div className='border'>
-                                <div className="">
-                                    <label>First name</label>
-                                    <input type="text" name='fname' value={inputdata.fname} onChange={setInputValue} placeholder='Enter FirstName' />
+                            <div className='form_div'>
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>First name</label>
+                                    <input className='input' type="text" name='fname' value={inputdata.fname} onChange={setInputValue} placeholder='Enter FirstName' />
                                 </div>
-                                <div className="">
-                                    <label>Last Name</label>
-                                    <input type="text" name='lname' value={inputdata.lname} onChange={setInputValue} placeholder='Enter LastName' />
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Last Name</label>
+                                    <input className='input' type="text" name='lname' value={inputdata.lname} onChange={setInputValue} placeholder='Enter LastName' />
                                 </div>
-                                <div className="">
-                                    <label>Email address</label>
-                                    <input type="email" name='email' value={inputdata.email} onChange={setInputValue} placeholder='Enter Email' />
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Email address</label>
+                                    <input className='input' type="email" name='email' value={inputdata.email} onChange={setInputValue} placeholder='Enter Email' />
                                 </div>
-                                <div className="">
-                                    <label>Mobile</label>
-                                    <input type="text" name='mobile' value={inputdata.mobile} onChange={setInputValue} placeholder='Enter Mobile' />
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Mobile</label>
+                                    <input className='input' type="text" name='mobile' value={inputdata.mobile} onChange={setInputValue} placeholder='Enter Mobile' />
                                 </div>
-                                <div className="">
-                                    <label>Select Your Gender</label>
-                                    <div>
-                                        <label>
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Select Your Status</label>
+                                    <Select className='select_status' options={options} onChange={setStatusValue} />
+                                </div>
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Select Your Gender</label>
+                                    <div className='gender_div'>
+                                        <label className='radio_label'>
                                             <input
                                                 type={"radio"}
                                                 label={`Male`}
                                                 name="gender"
                                                 value={"Male"}
                                                 onChange={setInputValue}
+                                                className='input_radio'
                                             />
-                                            <span>Male</span>
+                                            <span className='gender_label'>Male</span>
                                         </label>
-                                        <label>
+                                        <label className='radio_label'>
                                             <input
                                                 type={"radio"}
                                                 label={`Female`}
                                                 name="gender"
                                                 value={"Female"}
                                                 onChange={setInputValue}
+                                                className='input_radio'
                                             />
-                                            <span>Female</span>
+                                            <span className='gender_label'>Female</span>
                                         </label>
                                     </div>
                                 </div>
-                                <div className="">
-                                    <label>Select Your Status</label>
-                                    <Select options={options} onChange={setStatusValue} />
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Enter Your Location</label>
+                                    <input className='input' type="text" name='location' value={inputdata.location} onChange={setInputValue} placeholder='Enter Your Location' />
                                 </div>
-                                <div className="">
-                                    <label>Select Your Profile</label>
-                                    <input type="file" name='user_profile' onChange={setProfile} placeholder='Select Your Profile' />
+                                <div className='detail_fillup'>
+                                    <label className='form_label'>Select Your Profile</label>
+                                    <input className='input_profile' type="file" name='user_profile' onChange={setProfile} placeholder='Select Your Profile' />
                                 </div>
-                                <div className="">
-                                    <label>Enter Your Location</label>
-                                    <input type="text" name='location' value={inputdata.location} onChange={setInputValue} placeholder='Enter Your Location' />
-                                </div>
+                                
                             </div>
-                            <button type="submit" onClick={submitUserData}>
-                                Submit
-                            </button>
-
+                            <div className='submit'>
+                                <button type="submit" onClick={submitUserData}>
+                                    Submit
+                                </button>
+                            </div>
 
                         </form>
                     </Card>
