@@ -1,3 +1,7 @@
+.main_div{
+    margin:5rem;
+}
+
 .export_btn,
 .search_btn {
     background: #479C88;
@@ -25,8 +29,8 @@
 }
 
 .homeHeader {
-    width: 70vw;
-    border: 2px solid red;
+    width: 77vw;
+    /* border: 2px solid red; */
     margin: auto;
 }
 
