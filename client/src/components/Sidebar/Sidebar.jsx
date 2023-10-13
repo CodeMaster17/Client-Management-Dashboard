@@ -15,15 +15,16 @@ const LinkComponent = ({ to, name }) => {
 const Sidebar = () => {
     return (
         <div className='sidebarConatiner'>
-            <p className="color-white sidebarHeading">Member Manager</p>
+            <p className="color-white sidebarHeading">VoyagerVista</p>
             <ul className="linkContainer" style={{ width: "100%" }}>
-                <p className="linkHeading">Dashboard</p>
+                <p className="linkHeading">Member Dashboard</p>
                 <LinkComponent to={"home"} name="Home" />
                 <LinkComponent to={"register"} name="Add user" />
 
-                <LinkComponent to={"home"} name="Visualize" />
+                <LinkComponent to={"visualize"} name="Visualize" />
+                <p className="linkHeading">Website Dashboard</p>
 
-                <LinkComponent to={"home"} name="" />
+                <LinkComponent to={"addplace"} name="Add Place" />
 
             </ul>
 

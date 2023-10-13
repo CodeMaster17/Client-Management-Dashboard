@@ -39,6 +39,10 @@ const products = [
 ]
 
 export default function IndiaDestinations() {
+
+    
+
+
     return (
         <div className="bg-white mt-5">
             <h2 className="text-2xl font-bold tracking-tight text-center uppercase text-gray-900">Customers also purchased</h2>

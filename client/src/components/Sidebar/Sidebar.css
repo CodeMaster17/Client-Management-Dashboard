@@ -44,7 +44,13 @@
 .linkHeading {
     color: var(--white);
     margin-top: 2rem;
-    font-weight: 500;
+    font-weight: 200;
 }
 
-.sidebarHeading {}
+.sidebarHeading {
+    font-weight: 200;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

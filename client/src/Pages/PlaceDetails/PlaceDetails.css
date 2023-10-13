@@ -1,0 +1,28 @@
+.placeDetailsContainer {
+    width: 70vw;
+    border: 2px solid red;
+    margin: auto;
+    background-color: var(--white);
+}
+
+.placeThumbnail {
+    width: 100%;
+    height: 40vh;
+}
+
+.detailsContainer {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: start;
+    gap: 4rem;
+}
+
+.placeCover {
+    width: 20%;
+    height: 40vh;
+}
+
+.detailsDiv {
+    width: 70%;
+    border: 2px solid lightpink;
+}

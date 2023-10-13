@@ -1,0 +1,49 @@
+.viewPlacesContainer {
+    width: 80vw;
+    margin: 0 auto;
+    border: 2px solid red;
+    font-size: 2rem;
+}
+
+
+
+.viewPlaceHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewPlacesTable {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.viewPlacesTableHead {
+    width: 100%;
+
+}
+
+#tableHeadingrow {
+    background-color: var(--lightGray);
+}
+
+#tableHeadingrow th {
+    padding: 1rem 0 1rem 0;
+    color: var(--orange);
+    font-weight: 400;
+
+}
+
+.bgLightBlue {
+    background-color: var(--lightBlue);
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.tableDataRow td {
+    padding: 1rem 0 1rem 0;
+    font-weight: 500;
+
+}

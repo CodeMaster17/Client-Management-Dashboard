@@ -13,7 +13,7 @@ const ButtonComponent = ({ text, variant, onClickFunction }) => {
         }
     }, [variant]);
 
-    return <button className='button' style={{ backgroundColor: color }} onClick={onClickFunction} >{text}</button>;
+    return <button className='button' style={{ backgroundColor: color }}  onClick={onClickFunction} >{text}</button>;
 };
 
 export default ButtonComponent;
