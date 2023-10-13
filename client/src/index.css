@@ -3,6 +3,9 @@
     --white: white;
     --orange: #FF676E;
     --lightOrange: #FFEEE2;
+    --lightgray: #a1a7b4;
+    --black: #111;
+    --blue: #30aefc;
     font-size: 10px;
 
 }
@@ -25,4 +28,15 @@ p {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+.button {
+    width: auto;
+    height: 3.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1.4rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
 }

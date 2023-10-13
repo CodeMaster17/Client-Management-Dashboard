@@ -2,11 +2,11 @@ import React from 'react'
 import "./Sidebar.css"
 import { Link } from 'react-router-dom'
 
-const LinkComponent = ({ to }) => {
+const LinkComponent = ({ to, name }) => {
     return (
         <>
             <Link to={`/` + `${to}`} className='link'>
-                {to}
+                {name}
             </Link>
         </>
     )
@@ -18,12 +18,12 @@ const Sidebar = () => {
             <p className="color-white sidebarHeading">Member Manager</p>
             <ul className="linkContainer" style={{ width: "100%" }}>
                 <p className="linkHeading">Dashboard</p>
-                <LinkComponent to={"home"} />
-                <LinkComponent to={"home"} />
+                <LinkComponent to={"home"} name="Home" />
+                <LinkComponent to={"register"} name="Add user" />
 
-                <LinkComponent to={"home"} />
+                <LinkComponent to={"home"} name="Visualize" />
 
-                <LinkComponent to={"home"} />
+                <LinkComponent to={"home"} name="" />
 
             </ul>
 

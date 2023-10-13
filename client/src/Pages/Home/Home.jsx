@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import Cards from '../../components/cards/Cards';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
+import ButtonComponent from '../../utils/Button/Button';
 const Home = () => {
 
     const [userdata, setUserData] = useState([]);
@@ -127,18 +128,19 @@ const Home = () => {
                                     aria-label="Search"
                                     onChange={(e) => setSearch(e.target.value)}
                                 />
-                                <Button variant="success" className='search_btn'>Search</Button>
+
+                                <ButtonComponent variant="orange" text="Search" onClick={adduser} />
                             </Form>
                         </div>
                         <div className="add_btn">
-                            <Button variant="primary" onClick={adduser}> <i className="fa-solid fa-plus"></i>&nbsp; Add User</Button>
+                            <ButtonComponent variant="blue" text="Add User" onClick={adduser} />
                         </div>
                     </div>
                     {/* export,gender,status */}
 
                     <div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
                         <div className="export_csv">
-                            <Button className='export_btn' onClick={exportuser}>Export To Csv</Button>
+                            <ButtonComponent variant="blue" text="Export to CSV" onClick={exportuser} />
                         </div>
                         <div className="filter_gender">
                             <div className="filter">

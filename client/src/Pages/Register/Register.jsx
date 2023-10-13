@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./register.css"
 import { addData } from '../../components/context/ContextProvider';
 import Spinner from 'react-bootstrap/Spinner';
+import ButtonComponent from '../../utils/Button/Button';
 const Register = () => {
 
     const [inputdata, setInputData] = useState({
@@ -198,12 +199,14 @@ const Register = () => {
                                     <label className='form_label'>Select Your Profile</label>
                                     <input className='input_profile' type="file" name='user_profile' onChange={setProfile} placeholder='Select Your Profile' />
                                 </div>
-                                
+
                             </div>
                             <div className='submit'>
-                                <button type="submit" onClick={submitUserData}>
-                                    Submit
-                                </button>
+                                <ButtonComponent text="Submit" variant="blue" onClickFunction={submitUserData} />
+                                {/*
+                               <ButtonComponent variant="blue" text="Submit" />
+                            
+                            */}
                             </div>
 
                         </form>
