@@ -1,10 +1,24 @@
 .card-profile-stats img {
-    max-width: 86px;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
-    border: 1px solid #111;
+    border: 5px solid #f8f8f8;
+    margin: 10rem 0 0 3rem;
 }
 
-.email {
+.col{
+    background-color: var(--gray);
+    height: 150px;
+    border-radius: 9px;
+    margin: 0.5rem 1rem 0rem 1rem;
+}
+
+.card-profile{
+    width: 60%;
+    border-radius: 9px;
+}
+
+/* .email {
     color: rgb(238, 101, 122);
 }
 
@@ -14,4 +28,14 @@
 
 .calendar {
     color: rebeccapurple;
+} */
+
+
+.info{
+    padding: 2rem;
+}
+
+.info img{
+    height: 3rem;
+    width: 3rem;
 }

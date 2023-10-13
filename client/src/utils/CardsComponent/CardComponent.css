@@ -1,19 +1,35 @@
 .cardComponentContainer {
-    width: 15%;
+    width: 14%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1rem;
-    height: 15vh;
+    height: 19vh;
     border-radius: 10px;
     border: none;
+    /* border:2px solid green; */
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.cardComponentInnerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: center;
+    /* border: 2px solid red; */
+    /* height:30% */
+
+
 }
 
 .cardImage {
-    width: 20%;
+    /* width: 20%; */
+    /* padding-top: 0.5rem; */
+    height: 4rem;
 }
 
-.cardTitle {
+/* .cardTitle {
     font-size: 1.8rem;
 }
 
@@ -25,4 +41,14 @@
 
 .cardText {
     font-size: 2rem;
+} */
+
+.cardtitle{
+    font-size:1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cardtext{
+    /* font-size:2rem; */
+
 }

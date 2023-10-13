@@ -7,7 +7,7 @@ const CardComponent = ({ title, src, text }) => {
     return (
         <>
 
-            <Card className='cardComponentContainer'>
+            {/* <Card className=''>
                 <Card.Img variant="top" className='cardImage' src={src} />
                 <Card.Body className='cardBody'>
                     <Card.Title className='cardTitle'>{title}</Card.Title>
@@ -15,11 +15,15 @@ const CardComponent = ({ title, src, text }) => {
                         {text}
                     </Card.Text>
                 </Card.Body>
-            </Card>
+            </Card> */}
 
             <div className='cardComponentContainer' >
                 <img src={src} alt="image" className='cardImage' />
-                <Text text={"Title"} />
+                <div className='cardComponentInnerContainer'>
+
+                <p className='cardtitle p-bold'>{title}</p>
+                <p className='cardtext p-bolder'>{text}</p>
+                </div>
             </div>
         </>
     )

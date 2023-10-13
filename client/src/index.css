@@ -8,6 +8,7 @@
     --blue: #30aefc;
     font-size: 10px;
 
+
 }
 
 body {
@@ -39,4 +40,37 @@ code {
     border: none;
     border-radius: 4px;
     font-weight: 600;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.p-bold{
+    font-size: 0.5rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: normal;
+}
+.p-bolder{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0;
+    line-height: normal;
+
+}
+
+.username{
+    margin-top: 8rem;
+    /* text-align: center; */
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.icon_heading{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.details{
+    font-size: 1.6rem;
+    padding-left: 5px;
 }
