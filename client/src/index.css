@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,800&display=swap');
+
 :root {
     --gray: #292C33;
     --white: white;
@@ -7,7 +9,7 @@
     --black: #111;
     --blue: #30aefc;
     font-size: 10px;
-
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -25,11 +27,11 @@ p {
 .color-white {
     color: white;
 }
-
+/* 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-}
+} */
 
 .button {
     width: auto;
@@ -56,21 +58,4 @@ code {
     padding: 0;
     line-height: normal;
 
-}
-
-.username{
-    margin-top: 8rem;
-    /* text-align: center; */
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-
-.icon_heading{
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.details{
-    font-size: 1.6rem;
-    padding-left: 5px;
 }
