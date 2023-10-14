@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Volkhov: ['Volkhov', 'serif']
+        Volkhov: ['Volkhov', 'serif'],
+        DancingScript : ['Dancing Script', 'cursive'],
       },
       colors: {
         black: 'black',

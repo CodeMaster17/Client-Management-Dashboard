@@ -8,16 +8,23 @@
     align-items: center;
 }
 
+.sidebarLogo {
+    height: 4rem;
+    border-radius: 50%;
+}
+
 .link {
     list-style: none;
     background-color: none;
-    /* border: 2px solid red; */
     width: 80%;
     font-size: 2rem;
-    padding: 0.5rem;
     border-radius: 10px;
     color: var(--white);
     text-decoration: none;
+    font-weight: 100;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 
 }
 
@@ -27,10 +34,11 @@
     /* border: 2px solid red; */
     width: 80%;
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     color: var(--orange);
     text-decoration: none;
+    font-weight: 300;
 
 }
 
@@ -44,7 +52,7 @@
 .linkHeading {
     color: var(--white);
     margin-top: 2rem;
-    font-weight: 200;
+    /* font-weight: 200; */
 }
 
 .sidebarHeading {
@@ -52,5 +60,8 @@
     height: 10vh;
     display: flex;
     justify-content: center;
+    font-size: 3rem;
     align-items: center;
+    font-family: 'Dancing Script', cursive;
+
 }

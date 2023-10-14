@@ -7,31 +7,34 @@ import Edit from "./Pages/Edit/Edit";
 import Profile from "./Pages/Profile/Profile";
 import { Routes, Route } from "react-router-dom"
 import Sidebar from './components/Sidebar/Sidebar';
-import Signup from './Pages/SignUp/Signup';
+import Signup from './Auth/SignUp/Signup';
 import Visualize from './Pages/Visualize/Visualize';
 import AddPlace from './Pages/AddPlace/AddPlace';
 import ViewPlaces from './Pages/ViewPlaces/ViewPlaces';
 import PlaceDetails from './Pages/PlaceDetails/PlaceDetails';
+import Login from './Auth/Login/Login';
+import MemberDashboard from './Pages/Home/MemberDashboard';
 
 function App() {
   return (
     <>
       <div className='d-flex'>
-        <Sidebar />
         <div>
-          <Header />
           <Routes>
-            <Route path='/' element={<Signup />} />
-            <Route path='/home' element={<Home />} />
+            <Route path='/sign-up' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path="/" element={<Home />}>
+              <Route path='/' element={<MemberDashboard />} />
+              <Route path='/member-dashboard' element={<MemberDashboard />} />
+              <Route path="/visualize" element={<Visualize />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/edit/:id' element={<Edit />} />
+              <Route path='/userprofile/:id' element={<Profile />} />
 
-            <Route path="/visualize" element={<Visualize />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/edit/:id' element={<Edit />} />
-            <Route path='/userprofile/:id' element={<Profile />} />
-
-            <Route path="/viewplacedata" element={<ViewPlaces />} />
-            <Route path="/addplace" element={<AddPlace />} />
-            <Route path="/placedetails/:id" element={<PlaceDetails />} />
+              <Route path="/viewplacedata" element={<ViewPlaces />} />
+              <Route path="/addplace" element={<AddPlace />} />
+              <Route path="/placedetails/:id" element={<PlaceDetails />} />
+            </Route>
           </Routes>
         </div>
       </div>
