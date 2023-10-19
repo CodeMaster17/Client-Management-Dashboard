@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Card from "react-bootstrap/Card"
+// import Card from "react-bootstrap/Card"
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
 // import Row from 'react-bootstrap/Row';
-import Select from 'react-select';
+// import 'react-toastify/dist/ReactToastify.css';
+// import Select from 'react-select';
+// import { ToastContainer, toast } from "react-toastify"
+// import Spinner from 'react-bootstrap/Spinner';
 import { registerfunc } from "../../services/Apis"
-import { ToastContainer, toast } from "react-toastify"
 import { useNavigate } from "react-router-dom"
-import 'react-toastify/dist/ReactToastify.css';
 import "./register.css"
 import { addData } from '../../components/context/ContextProvider';
-import Spinner from 'react-bootstrap/Spinner';
-import ButtonComponent from '../../utils/Button/Button';
+import ButtonComponent from '../../Utils/Button/Button';
 const Register = () => {
 
     const [inputdata, setInputData] = useState({
@@ -61,25 +61,25 @@ const Register = () => {
         const { fname, lname, email, mobile, gender, location } = inputdata;
 
         if (fname === "") {
-            toast.error("First name is Required !")
+            // toast.error("First name is Required !")
         } else if (lname === "") {
-            toast.error("Last name is Required !")
+            // toast.error("Last name is Required !")
         } else if (email === "") {
-            toast.error("Email is Required !")
+            // toast.error("Email is Required !")
         } else if (!email.includes("@")) {
-            toast.error("Enter Valid Email !")
+            // toast.error("Enter Valid Email !")
         } else if (mobile === "") {
-            toast.error("Mobile is Required !")
+            // toast.error("Mobile is Required !")
         } else if (mobile.length > 10) {
-            toast.error("Enter Valid Mobile!f")
+            // toast.error("Enter Valid Mobile!f")
         } else if (gender === "") {
-            toast.error("Gender is Required !")
+            // toast.error("Gender is Required !")
         } else if (status === "") {
-            toast.error("Status is Required !")
+            // toast.error("Status is Required !")
         } else if (image === "") {
-            toast.error("Prfile is Required !")
+            // toast.error("Prfile is Required !")
         } else if (location === "") {
-            toast.error("location is Required !")
+            // toast.error("location is Required !")
         } else {
             console.log(image);
 
@@ -114,7 +114,7 @@ const Register = () => {
                 setUseradd(response.data)
                 navigate("/");
             } else {
-                toast.error("Error!")
+                // toast.error("Error!")
             }
 
         }
@@ -135,8 +135,9 @@ const Register = () => {
     return (
         <>
             {
-                showspin ? <Spinner /> : <div className="container">
+                showspin ? "spinner" : <div className="container">
                     <h2 className='text-center mt-4'>Register Your Details</h2>
+                    {/* 
                     <Card className='shadow mt-2 p-5 m-5'>
                         <div className="profile_div text-center">
                             <img src={preview ? preview : "/man.png"} alt="img" />
@@ -162,7 +163,10 @@ const Register = () => {
                                 </div>
                                 <div className='detail_fillup'>
                                     <label className='form_label'>Select Your Status</label>
-                                    <Select className='select_status' options={options} onChange={setStatusValue} />
+                                    
+
+                                        <Select className='select_status' options={options} onChange={setStatusValue} />
+            
                                 </div>
                                 <div className='detail_fillup'>
                                     <label className='form_label'>Select Your Gender</label>
@@ -203,15 +207,17 @@ const Register = () => {
                             </div>
                             <div className='submit'>
                                 <ButtonComponent text="Submit" variant="blue" onClickFunction={submitUserData} />
-                                {/*
-                               <ButtonComponent variant="blue" text="Submit" />
-                            
-                            */}
+                                
                             </div>
 
                         </form>
                     </Card>
-                    <ToastContainer position="top-center" />
+                    * / }
+                    {/*
+
+                        <ToastContainer position="top-center" />
+                        */}
+
                 </div>
             }
 

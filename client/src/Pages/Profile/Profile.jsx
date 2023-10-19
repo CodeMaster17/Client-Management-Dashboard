@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Card from "react-bootstrap/Card"
-import Row from 'react-bootstrap/esm/Row'
+// import Card from "react-bootstrap/Card"
+// import Row from 'react-bootstrap/esm/Row'
+// import Spinner from 'react-bootstrap/Spinner';
 import { useParams } from 'react-router-dom'
-import Spinner from 'react-bootstrap/Spinner';
 import { singleUsergetfunc } from "../../services/Apis"
 import { BASE_URL } from '../../services/helper'
 import moment from "moment"
@@ -12,7 +12,7 @@ import Female from '../../assets/Female.png'
 import Male from '../../assets/Male.png'
 import location from '../../assets/location.png'
 import date from '../../assets/date.png'
-import ButtonComponent from '../../utils/Button/Button';
+import ButtonComponent from '../../Utils/Button/Button';
 
 const Profile = () => {
 
@@ -41,7 +41,7 @@ const Profile = () => {
     return (
         <>
             {
-                showspin ? <Spinner /> : <div className="profileCardContainer">
+                showspin ? "Loading.." : <div className="profileCardContainer">
                     <div className='profileCard'>
 
 
@@ -61,7 +61,7 @@ const Profile = () => {
 
                                     <div className='email_div'>{userprofile.email}</div>
                                     <div className='phone_gender_div'>{userprofile.mobile}</div>
-                                    <div className='phone_gender_div'><img className='genderImage' src={userprofile.gender === 'Female' ? Female : Male}/>{userprofile.gender}</div>
+                                    <div className='phone_gender_div'><img className='genderImage' src={userprofile.gender === 'Female' ? Female : Male} />{userprofile.gender}</div>
                                 </div>
                                 <div className="button_div"><ButtonComponent text={userprofile.status} variant={userprofile.status === 'Active' ? 'blue' : 'orange'} /></div>
                             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Visualize.css'
 import BarChart from '../../components/Charts/BarChart'
 const Visualize = () => {

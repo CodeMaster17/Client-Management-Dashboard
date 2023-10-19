@@ -1,6 +1,6 @@
 .placeDetailsContainer {
     width: 70vw;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: auto;
     background-color: var(--white);
 }

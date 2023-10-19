@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Card from "react-bootstrap/Card"
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Select from 'react-select';
+// import Card from "react-bootstrap/Card"
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+// import Row from 'react-bootstrap/Row';
+// import Select from 'react-select';
+// import Spinner from 'react-bootstrap/Spinner';
+// import { ToastContainer, toast } from "react-toastify"
+// import 'react-toastify/dist/ReactToastify.css';
+
 import { singleUsergetfunc, editfunc } from '../../services/Apis';
 import { useNavigate, useParams } from 'react-router-dom';
 import { updateData } from '../../components/context/ContextProvider';
-import { ToastContainer, toast } from "react-toastify"
 import { BASE_URL } from '../../services/helper';
-import 'react-toastify/dist/ReactToastify.css';
 import "./edit.css"
-import Spinner from 'react-bootstrap/Spinner';
 
 
 const Edit = () => {
@@ -145,13 +146,14 @@ const Edit = () => {
     return (
         <>
             {
-                showspin ? <Spinner /> : <div className="container">
+                showspin ? "spinner" : <div className="container">
                     <h2 className='text-center mt-1'>Update Your Details</h2>
+                    {/*
                     <Card className='shadow mt-3 p-3'>
                         <div className="profile_div text-center">
                             <img src={image ? preview : `${BASE_URL}/uploads/${imgdata}`} alt="img" />
                         </div>
-
+                        
                         <Form>
                             <Row>
                                 <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
@@ -206,9 +208,11 @@ const Edit = () => {
                                 </Button>
                             </Row>
 
-                        </Form>
+            </Form> 
                     </Card>
+                    
                     <ToastContainer position="top-center" />
+            */}
                 </div>
             }
 

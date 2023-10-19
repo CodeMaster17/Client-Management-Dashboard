@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Card from "react-bootstrap/Card";
-import Select from 'react-select';
-import { ToastContainer, toast } from "react-toastify";
+// import Card from "react-bootstrap/Card";
+// import Select from 'react-select';
+// import Spinner from 'react-bootstrap/Spinner';
+// import { ToastContainer, toast } from "react-toastify";
+// import 'react-toastify/dist/ReactToastify.css';
+
+
 import { useNavigate } from "react-router-dom";
-import 'react-toastify/dist/ReactToastify.css';
 import "./AddPlace.css";
-import Spinner from 'react-bootstrap/Spinner';
-import ButtonComponent from '../../utils/Button/Button';
+import ButtonComponent from '../../Utils/Button/Button';
 import { addTouristPlaceFunc } from '../../services/ApiTouristPlace';
 
 const AddProduct = () => {
@@ -113,9 +115,10 @@ const AddProduct = () => {
     return (
         <>
             {
-                showspin ? <Spinner animation="border" /> : (
+                showspin ? "Spinner" : (
                     <div className="container">
                         <h2 className='text-center mt-4'>Add Tourist Place</h2>
+                        { /* 
                         <Card className='shadow mt-2 p-5 m-5'>
                             <div className="profile_div text-center">
                                 <img src={preview ? preview : "/man.png"} alt="img" />
@@ -177,7 +180,11 @@ const AddProduct = () => {
                                 </div>
                             </form>
                         </Card>
+                        */}
+                        {/* 
+                        
                         <ToastContainer position="top-center" />
+                    */ }
                     </div>
                 )
             }

@@ -2,7 +2,7 @@ import React from 'react'
 import heroImage from "/assets/Traveller.png"
 const HeroArea = () => {
     return (
-        <section className="text-gray-600 body-font">
+        <section className="text-gray-600 body-font max-w-[1200px] mx-auto">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <p className='uppercase text-darkOrange text-lg'>Best Destinations around the world</p>

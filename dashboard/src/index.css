@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .headingBold {
+    @apply font-bold text-4xl;
+  }
+}

@@ -1,17 +1,17 @@
 import { useContext, useEffect, useState } from 'react'
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
 import Tables from '../../components/Tables/Tables';
 import { useNavigate } from "react-router-dom"
 import { addData, dltdata, updateData } from '../../components/context/ContextProvider';
 import { usergetfunc, deletfunc, exporttocsvfunc, allusergetfunc } from "../../services/Apis";
-import "./MemberDashboard.css"
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import Cards from '../../components/cards/Cards';
-import Spinner from 'react-bootstrap/Spinner';
-import Alert from 'react-bootstrap/Alert';
-import ButtonComponent from '../../utils/Button/Button';
+// import Spinner from 'react-bootstrap/Spinner';
+import ButtonComponent from '../../Utils/Button/Button';
+import DataTable from '../../components/Tables/DataTable';
+
+
+import "./MemberDashboard.css"
+
 const MemberDashboard = () => {
 
     const [userdata, setUserData] = useState([]);
@@ -55,7 +55,7 @@ const MemberDashboard = () => {
             userGet();
             setDLtdata(response.data)
         } else {
-            toast.error("error")
+            // toast.error("error")
         }
     }
 
@@ -65,7 +65,7 @@ const MemberDashboard = () => {
         if (response.status === 200) {
             window.open(response.data.downloadUrl, "blank")
         } else {
-            toast.error("error !")
+            // toast.error("error !")
         }
     }
 
@@ -96,15 +96,15 @@ const MemberDashboard = () => {
     return (
         <>
             {
-                useradd ? <Alert variant="success" onClose={() => setUseradd("")} dismissible>{useradd.fname.toUpperCase()} Succesfully Added</Alert> : ""
+                // useradd ? <Alert variant="success" onClose={() => setUseradd("")} dismissible>{useradd.fname.toUpperCase()} Succesfully Added</Alert> : ""
             }
 
             {
-                update ? <Alert variant="primary" onClose={() => setUpdate("")} dismissible>{update.fname.toUpperCase()} Succesfully Update</Alert> : ""
+                // update ? <Alert variant="primary" onClose={() => setUpdate("")} dismissible>{update.fname.toUpperCase()} Succesfully Update</Alert> : ""
             }
 
             {
-                deletedata ? <Alert variant="danger" onClose={() => setDLtdata("")} dismissible>{deletedata.fname.toUpperCase()} Succesfully Delete</Alert> : ""
+                // deletedata ? <Alert variant="danger" onClose={() => setDLtdata("")} dismissible>{deletedata.fname.toUpperCase()} Succesfully Delete</Alert> : ""
             }
 
             <div className='homeHeader'>
@@ -115,30 +115,35 @@ const MemberDashboard = () => {
                 </div>
             </div>
 
-            <div className="container">
+            <div className="tableContainer">
                 <div className="main_div">
                     {/* search add btn */}
+                    {/*
                     <div className="search_add mt-4 d-flex justify-content-between">
-                        <div className="search col-lg-4">
+                    <div className="search col-lg-4">
                             <Form className="d-flex">
                                 <Form.Control
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                    onChange={(e) => setSearch(e.target.value)}
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                                onChange={(e) => setSearch(e.target.value)}
                                 />
-
+                                
                                 <ButtonComponent variant="orange" text="Search" onClick={adduser} />
-                            </Form>
-                        </div>
-                        <div className="add_btn">
-                            <ButtonComponent variant="blue" text="Add User" onClick={adduser} />
-                        </div>
-                    </div>
+                                </Form>
+                                </div>
+                                <div className="add_btn">
+                                <ButtonComponent variant="blue" text="Add User" onClick={adduser} />
+                                </div>
+                                </div>
+                            */}
                     {/* export,gender,status */}
 
                     <div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
+
+                        {/**
+                
                         <div className="export_csv">
                             <ButtonComponent variant="blue" text="Export to CSV" onClick={exportuser} />
                         </div>
@@ -171,8 +176,9 @@ const MemberDashboard = () => {
                                 </div>
                             </div>
                         </div>
-
+ */}
                         {/* short by value */}
+                        {/* 
                         <div className="filter_newold">
                             <h3>Short By Value</h3>
                             <Dropdown className='text-center'>
@@ -185,8 +191,10 @@ const MemberDashboard = () => {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </div>
+*/}
 
                         {/* filter by status */}
+                        {/* 
                         <div className="filter_status">
                             <div className="status">
                                 <h3>Filter By Status</h3>
@@ -216,19 +224,34 @@ const MemberDashboard = () => {
                                 </div>
                             </div>
                         </div>
+                        */}
                     </div>
                 </div>
                 {
-                    showspin ? <Spinner /> : <Tables
-                        userdata={userdata}
-                        deleteUser={deleteUser}
-                        userGet={userGet}
-                        handlePrevious={handlePrevious}
-                        handleNext={handleNext}
-                        page={page}
-                        pageCount={pageCount}
-                        setPage={setPage}
-                    />
+                    showspin ? "" : <DataTable />
+
+                    // <Tables
+                    //     userdata={userdata}
+                    //     deleteUser={deleteUser}
+                    //     userGet={userGet}
+                    //     handlePrevious={handlePrevious}
+                    //     handleNext={handleNext}
+                    //     page={page}
+                    //     pageCount={pageCount}
+                    //     setPage={setPage}
+                    // />
+                }
+                {
+                    // showspin ? <Spinner /> : <Tables
+                    //     userdata={userdata}
+                    //     deleteUser={deleteUser}
+                    //     userGet={userGet}
+                    //     handlePrevious={handlePrevious}
+                    //     handleNext={handleNext}
+                    //     page={page}
+                    //     pageCount={pageCount}
+                    //     setPage={setPage}
+                    // />
                 }
 
             </div>

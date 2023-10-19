@@ -1,6 +1,6 @@
 import React from 'react'
 import './signUp.css'
-import ButtonComponent from '../../utils/Button/Button'
+import ButtonComponent from '../../Utils/Button/Button'
 const Signup = () => {
     return (
         <div className='loginContainer'>

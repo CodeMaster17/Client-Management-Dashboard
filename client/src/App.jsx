@@ -1,16 +1,13 @@
 // import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Headers/Headers";
 import Home from "./Pages/Home/Home";
 import Register from "./Pages/Register/Register";
 import Edit from "./Pages/Edit/Edit";
 import Profile from "./Pages/Profile/Profile";
 import { Routes, Route } from "react-router-dom"
-import Sidebar from './components/Sidebar/Sidebar';
 import Signup from './Auth/SignUp/Signup';
 import Visualize from './Pages/Visualize/Visualize';
 import AddPlace from './Pages/AddPlace/AddPlace';
-import ViewPlaces from './Pages/ViewPlaces/ViewPlaces';
+import ViewPlaces from './Pages/ViewPlaces/PlacesDashboard';
 import PlaceDetails from './Pages/PlaceDetails/PlaceDetails';
 import Login from './Auth/Login/Login';
 import MemberDashboard from './Pages/Home/MemberDashboard';
